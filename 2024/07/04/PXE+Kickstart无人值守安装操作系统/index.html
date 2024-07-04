@@ -6,13 +6,21 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="什么是PXE？PXE，全名Pre-boot Execution Environment，预启动执行环境；通过网络接口启动计算机，不依赖本地存储设备（如硬盘）或本地已安装的操作系统；由Intel和Systemsoft公司于1999年9月20日公布的技术；Client&#x2F;Server的工作模式；PXE客户端会调用网际协议(IP)、用户数据报协议(UDP)、动态主机设定协议(DHCP)、小型文件">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2024/07/04/PXE+Kickstart%E6%97%A0%E4%BA%BA%E5%80%BC%E5%AE%88%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="什么是PXE？PXE，全名Pre-boot Execution Environment，预启动执行环境；通过网络接口启动计算机，不依赖本地存储设备（如硬盘）或本地已安装的操作系统；由Intel和Systemsoft公司于1999年9月20日公布的技术；Client&#x2F;Server的工作模式；PXE客户端会调用网际协议(IP)、用户数据报协议(UDP)、动态主机设定协议(DHCP)、小型文件">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.beyourself.org.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDYvMjIvNWQwZDE0YzY3NTFiMDY1ODMxLnBuZw#id=lcg9R&originHeight=438&originWidth=896&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://img.beyourself.org.cn/19e6fdfcee284b6e87730b787069634f.png#id=wNigJ&originHeight=809&originWidth=745&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://img.beyourself.org.cn/d57f89576d27434a8df44c87af9b5b0d.png#id=Xr3LP&originHeight=809&originWidth=745&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="article:published_time" content="2024-07-04T03:26:10.391Z">
+<meta property="article:modified_time" content="2024-03-12T09:39:35.323Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.beyourself.org.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDYvMjIvNWQwZDE0YzY3NTFiMDY1ODMxLnBuZw#id=lcg9R&originHeight=438&originWidth=896&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,9 +75,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-PXE+Kickstart无人值守安装操作系统" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-PXE+Kickstart无人值守安装操作系统" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/07/04/PXE+Kickstart%E6%97%A0%E4%BA%BA%E5%80%BC%E5%AE%88%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="article-date">
   <time class="dt-published" datetime="2024-07-04T03:26:10.391Z" itemprop="datePublished">2024-07-04</time>
@@ -139,162 +145,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-自建yum源" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/04/%E8%87%AA%E5%BB%BAyum%E6%BA%90/" class="article-date">
-  <time class="dt-published" datetime="2024-07-04T02:21:24.300Z" itemprop="datePublished">2024-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="自建yum源"><a href="#自建yum源" class="headerlink" title="自建yum源"></a>自建yum源</h1><h2 id="本地源"><a href="#本地源" class="headerlink" title="本地源"></a>本地源</h2><h3 id="一、使用本地的镜像文件来制作yum源-做完记得删除"><a href="#一、使用本地的镜像文件来制作yum源-做完记得删除" class="headerlink" title="一、使用本地的镜像文件来制作yum源(做完记得删除)"></a>一、使用本地的镜像文件来制作yum源(做完记得删除)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、挂载dvd镜像或将镜像拷贝到机器中</span><br><span class="line"><span class="built_in">mkdir</span> /yum-repo</span><br><span class="line">mount /dev/cdrom /yum-repo <span class="comment"># 如果我们在设置中挂载了镜像使用这个方法</span></span><br><span class="line">mount 镜像的路径  /yum-repo <span class="comment"># 如果我们拷贝镜像到了系统中，可以用这种方法</span></span><br><span class="line"></span><br><span class="line">2、准备本地yum源文件</span><br><span class="line">vim /etc/yum.repos.d/xa2401.repo <span class="comment"># 源文件必须以.repo结尾</span></span><br><span class="line"><span class="comment"># 源标识</span></span><br><span class="line">[xa2401]</span><br><span class="line"><span class="comment"># 源名字</span></span><br><span class="line">name=xa2401-base</span><br><span class="line"><span class="comment"># 源地址，本地用file://</span></span><br><span class="line">baseurl=file:///yum-repo</span><br><span class="line"><span class="comment"># 是否检查</span></span><br><span class="line">gpgcheck=0</span><br><span class="line"><span class="comment"># 是否开启</span></span><br><span class="line">enabled=1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  
+    <a href="/2024/07/04/%E8%87%AA%E5%BB%BAyum%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-
-
-<h3 id="二、自己准备的包做成yum源"><a href="#二、自己准备的包做成yum源" class="headerlink" title="二、自己准备的包做成yum源"></a>二、自己准备的包做成yum源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1、你可以在网上下载包，或在其他机器上缓存包并拷贝到一个目录中。可以看到我的这个目录下全都是rpm包</span><br><span class="line">[root@localhost ~]<span class="comment"># ls /package/ | head -2</span></span><br><span class="line">adcli-0.8.1-16.el7_9.1.x86_64.rpm</span><br><span class="line">at-3.1.13-25.el7_9.x86_64.rpm</span><br><span class="line"></span><br><span class="line">2、安装制作yum源的工具</span><br><span class="line">yum install -y createrepo</span><br><span class="line"></span><br><span class="line">3、制作源</span><br><span class="line">createrepo /package</span><br><span class="line"></span><br><span class="line">4、创建源文件</span><br><span class="line"><span class="comment"># 源标识</span></span><br><span class="line">[xa2401]</span><br><span class="line"><span class="comment"># 源名字</span></span><br><span class="line">name=xa2401-base</span><br><span class="line"><span class="comment"># 源地址，本地用file://</span></span><br><span class="line">baseurl=file:///package</span><br><span class="line"><span class="comment"># 是否检查</span></span><br><span class="line">gpgcheck=0</span><br><span class="line"><span class="comment"># 是否开启</span></span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h2 id="远程源"><a href="#远程源" class="headerlink" title="远程源"></a>远程源</h2><h3 id="一、使用ftp制作远程源"><a href="#一、使用ftp制作远程源" class="headerlink" title="一、使用ftp制作远程源"></a>一、使用ftp制作远程源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1、关闭防火墙和selinux</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">setenforce 0</span><br><span class="line"></span><br><span class="line">2、安装vsftpd</span><br><span class="line">yum install -y vsftpd</span><br><span class="line"></span><br><span class="line">3、创建目录并拷贝包，然后授权</span><br><span class="line">mkdir /var/ftp/xa2401-ftp</span><br><span class="line">ls /yum-repo/Packages/* | head -100 | xargs -i cp &#123;&#125; /var/ftp/xa2401-ftp/  # 拷贝一些包过来</span><br><span class="line">createrepo /var/ftp/xa2401-ftp/ # 创建为yum源</span><br><span class="line">chown ftp.ftp -R /var/ftp/xa2401-ftp</span><br><span class="line"></span><br><span class="line">4、启动并访问测试</span><br><span class="line">systemctl start vsftpd</span><br><span class="line">打开此电脑，地址栏访问 ftp://ip地址，如果可以看到，表示配置正确</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5、客户端配置源文件</span><br><span class="line">vim /etc/yum.repos.d/xa2401-ftp.repo # 源文件必须以.repo结尾</span><br><span class="line"># 源标识</span><br><span class="line">[xa2401-ftp]</span><br><span class="line"># 源名字</span><br><span class="line">name=xa2401-ftp</span><br><span class="line"># 源地址，远程用ftp://</span><br><span class="line">baseurl=ftp://192.168.75.248</span><br><span class="line"># 是否检查</span><br><span class="line">gpgcheck=0</span><br><span class="line"># 是否开启</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="如何获取阿里云的源"><a href="#如何获取阿里云的源" class="headerlink" title="如何获取阿里云的源"></a>如何获取阿里云的源</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install -y yum-utils</span><br><span class="line">[root@localhost ~]# yum repolist</span><br><span class="line">已加载插件：fastestmirror</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.aliyun.com</span><br><span class="line"> * extras: mirrors.aliyun.com</span><br><span class="line"> * updates: mirrors.aliyun.com</span><br><span class="line">源标识                   源名称                                                  状态</span><br><span class="line">base/7/x86_64            CentOS-7 - Base - mirrors.aliyun.com                    10,072</span><br><span class="line">epel/x86_64              Extra Packages for Enterprise Linux 7 - x86_64          13,785</span><br><span class="line">extras/7/x86_64          CentOS-7 - Extras - mirrors.aliyun.com                     519</span><br><span class="line">updates/7/x86_64         CentOS-7 - Updates - mirrors.aliyun.com                  5,766</span><br><span class="line">xa2401-ftp               xa2401-ftp                                                 100</span><br><span class="line">repolist: 30,242</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# reposync -r base -r epel -r extras -r updates</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/04/%E8%87%AA%E5%BB%BAyum%E6%BA%90/" data-id="cly6nizmw00016klr4hhfc685" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-cookie" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/04/cookie/" class="article-date">
-  <time class="dt-published" datetime="2024-07-03T16:48:16.082Z" itemprop="datePublished">2024-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="1、shh远程登录较慢解决"><a href="#1、shh远程登录较慢解决" class="headerlink" title="1、shh远程登录较慢解决"></a>1、shh远程登录较慢解决</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/ssh/sshd_config</span><br><span class="line">把yes改为：UseDNS no</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、ansible的table键缩进"><a href="#2、ansible的table键缩进" class="headerlink" title="2、ansible的table键缩进"></a>2、ansible的table键缩进</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/vimrc</span><br><span class="line">set ts=2 </span><br><span class="line">set nu </span><br><span class="line">set list </span><br><span class="line">set cursorline </span><br><span class="line">set cursorcolumn</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="3、rzsz上传下载工具"><a href="#3、rzsz上传下载工具" class="headerlink" title="3、rzsz上传下载工具"></a>3、rzsz上传下载工具</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">一、第一种安装方式</span><br><span class="line">http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz</span><br><span class="line">tar zxvf lrzsz-0.12.20.tar.gz &amp;&amp; cd lrzsz-0.12.20</span><br><span class="line">./configure &amp;&amp; make &amp;&amp; make install</span><br><span class="line">上面安装过程默认把lsz和lrz安装到了/usr/local/bin/目录下，现在我们并不能直接使用，下面创建软链接，并命名为rz/sz：</span><br><span class="line">cd /usr/bin</span><br><span class="line">ln -s /usr/local/bin/lrz rz</span><br><span class="line">ln -s /usr/local/bin/lsz sz</span><br><span class="line">二、第二种安装方式</span><br><span class="line">yum install -y lrzsz</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/04/cookie/" data-id="cly6nizms00006klrfw123auh" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/04/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-03T16:46:09.381Z" itemprop="datePublished">2024-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/04/hello-world/" data-id="cly6nizn600026klrbx494zfz" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
