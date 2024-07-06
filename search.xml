@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/Hexo-blog/</url>
+    <content><![CDATA[<h1 id="Hexo博客"><a href="#Hexo博客" class="headerlink" title="Hexo博客"></a>Hexo博客</h1><p>是的，你没有看错！</p>
+<p>不用服务器，不用注册域名，不用花钱，不用敲大代码等等</p>
+<p>一个博客就值得你拥有</p>
+<p>使用到的工具 （本教程统一在Windows系统下搭建）</p>
+<p>Node.js、Hexo、Git、Github账号</p>
+<p>请自行注册一个Github账号</p>
+<p>最后的部署到网上的博客展示</p>
+<h2 id="一、从创建到部署博客"><a href="#一、从创建到部署博客" class="headerlink" title="一、从创建到部署博客"></a>一、从创建到部署博客</h2><h3 id="1、安装好Node-js"><a href="#1、安装好Node-js" class="headerlink" title="1、安装好Node.js"></a>1、安装好Node.js</h3><p>别忘了用命令npm检验Node.js安装是否完成，</p>
+<p>做完了这一步之后，恭喜你，前期的准备工作已经完成，环境这一步结束了。</p>
+<h3 id="2、安装好Git"><a href="#2、安装好Git" class="headerlink" title="2、安装好Git"></a>2、安装好Git</h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704142050891.png" alt="image-20240704142050891"></p>
+<h3 id="3、关于hexo的安装教程比较简单，网上有很多完整的教程，在这里就不再赘述。"><a href="#3、关于hexo的安装教程比较简单，网上有很多完整的教程，在这里就不再赘述。" class="headerlink" title="3、关于hexo的安装教程比较简单，网上有很多完整的教程，在这里就不再赘述。"></a>3、关于hexo的安装教程比较简单，网上有很多完整的教程，在这里就不再赘述。</h3><p>安装Hexo 命令：</p>
+<p>cnpm install -g hexo-cli</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704142440746.png" alt="image-20240704142440746"></p>
+<p>查看版本</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704142545534.png" alt="image-20240704142545534"></p>
+<p>到这里需要在E盘下创建hexo文件夹</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704142713572.png" alt="image-20240704142713572"></p>
+<p>如果出现错误可以删除blog目录就可以重新部署了</p>
+<h3 id="4、sudo-hexo-init-（初始化一个博客）"><a href="#4、sudo-hexo-init-（初始化一个博客）" class="headerlink" title="4、sudo  hexo  init （初始化一个博客）"></a>4、sudo  hexo  init （初始化一个博客）</h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704143141669.png" alt="image-20240704143141669"></p>
+<p>以下是他生成的目录</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704143236168.png" alt="image-20240704143236168"></p>
+<h3 id="5、命令hexo-server启动github服务器"><a href="#5、命令hexo-server启动github服务器" class="headerlink" title="5、命令hexo server启动github服务器"></a>5、命令hexo server启动github服务器</h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704143340037.png" alt="image-20240704143340037"></p>
+<h3 id="6、浏览博客"><a href="#6、浏览博客" class="headerlink" title="6、浏览博客"></a>6、浏览博客</h3><p>按照5中提示的网址<a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>复制该网址在浏览器中打开，如下图所示：这样一个博客的架子就出来了。</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704143413187.png" alt="image-20240704143413187"></p>
+<h3 id="7、部署前哨（一）：添加Github仓库地址"><a href="#7、部署前哨（一）：添加Github仓库地址" class="headerlink" title="7、部署前哨（一）：添加Github仓库地址"></a>7、部署前哨（一）：添加Github仓库地址</h3><p>在部署之前，我们需要先知道博客的部署地址，它需要对应 GitHub 的一个 Repository 的地址，这个信息需要我们来配置一下。(这里我就省略了，自己去布置)，这是我的这个Github仓库</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704144520070.png" alt="image-20240704144520070"></p>
+<p>打开文件Hexo下的blog文件根目录下的 _config.yml 文件，我使用编辑器vscode打开的（或者你使用其他代码编辑器打开，千万别用文本编辑器打开），找到 Deployment 这个地方(提示：文件最后)，把刚才新建的 Repository 的地址贴过来</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704144736317.png" alt="image-20240704144736317"></p>
+<h3 id="8、部署前哨（二）：部署插件"><a href="#8、部署前哨（二）：部署插件" class="headerlink" title="8、部署前哨（二）：部署插件"></a><strong>8、部署前哨（二）：</strong>部署插件</h3><p>需要安装一个支持 Git 的部署插件： cnpm install –save hexo-deployer-git，有了它我们才可以顺利将其部署到 GitHub 上面(如果不安装的话，在执行部署命令时会报错).</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704145131607.png" alt="image-20240704145131607"></p>
+<h3 id="9、下面开始部署到Github（可以先执行这步看是否报错，还需要发送公钥给github看10）"><a href="#9、下面开始部署到Github（可以先执行这步看是否报错，还需要发送公钥给github看10）" class="headerlink" title="9、下面开始部署到Github（可以先执行这步看是否报错，还需要发送公钥给github看10）"></a>9、下面开始部署到Github（可以先执行这步看是否报错，还需要发送公钥给github看10）</h3><p>如果8的插件部署没有问题就开始进行部署，首先输入部署命令如下：hexo deploy</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704145408819.png" alt="image-20240704145408819"></p>
+<p>结尾…</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704150047421.png" alt="image-20240704150047421"></p>
+<p>可以发现出现了上面的报错提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Error: Spawn failed</span><br></pre></td></tr></table></figure>
+
+<p>解决方法第一次：<br>我按照出现错误提示中的网址去打开它：</p>
+<p><a href="https://hexo.io/docs/troubleshooting.html">https://hexo.io/docs/troubleshooting.html</a></p>
+<p>并找到了部署到Github目前的语法规定的网页下</p>
+<p><a href="https://hexo.io/docs/github-pages">https://hexo.io/docs/github-pages</a></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704150205885.png" alt="image-20240704150205885"></p>
+<p>重新上传命令：</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>最终出现下面的结果:说明出现的问题解决了</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704150242609.png" alt="image-20240704150242609"></p>
+<p>由于我起初没有部署仓库的密钥，所以要去仓库部署。</p>
+<h3 id="10、创建的-ssh-密钥的密码"><a href="#10、创建的-ssh-密钥的密码" class="headerlink" title="10、创建的 ssh 密钥的密码"></a>10、创建的 ssh 密钥的密码</h3><p>(1)、我打开了我得仓库，并找到了设置添加公钥</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704150641147.png" alt="image-20240704150641147"></p>
+<p>（2）查看部署密钥指南以了解更多信息</p>
+<p><a href="https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys">https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys</a></p>
+<p>找到了设置密码的步骤（经过翻译以后，目前我们进行到下面的5）</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704150700474.png" alt="image-20240704150700474"></p>
+<p>（3）怎么创建SSH密钥?</p>
+<p>步骤：</p>
+<p>找到本地环境：C:\Users\曹俊龙.ssh 这个路径下的用户&#x2F;名称&#x2F;.ssh</p>
+<p>在这路径下，打开gitbub的命令控制台</p>
+<p>(I)git init &#x2F;&#x2F;初始化一下，看看路径对不对</p>
+<p>(II)ssh-keygen -t rsa -C “你的邮箱”</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151034975.png" alt="image-20240704151034975"></p>
+<p>到本地环境.ssh路径下查看，是否生成id_rsa,id_rsa.pub这个两个文件</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151047638.png" alt="image-20240704151047638"></p>
+<p>生成后，现在把id_rsa.pub文件里面的内容复制到githubd 的add github key 的key里面（也就是刚刚仓库的密钥添加的地方）</p>
+<p>点击Add SSH key获得下面结果</p>
+<p>注意：第一次提交，配置密钥，需要输入github的密码，如下就是添加秘钥成功</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151115495.png" alt="image-20240704151115495"></p>
+<p>密钥配置成功后，要验证一下是否配置成功</p>
+<p>命令：ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>出现下面提示，说明配置成功。</p>
+<p>Hi KangChou&#x2F;KangChou.github.io! You’ve successfully authenticated, but GitHub does not provide shell access</p>
+<h3 id="11、再次使用密钥部署"><a href="#11、再次使用密钥部署" class="headerlink" title="11、再次使用密钥部署"></a>11、再次使用密钥部署</h3><p>仍然使用命令：</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>出现Deploy done :git说明已经部署成功</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151336717.png" alt="image-20240704151336717"></p>
+<p>这时候我们访问一下 GitHub Repository 同名的链接，</p>
+<p>比如我的 KangChou 博客的 Repository 名称取的是 KangChou.github.io，</p>
+<p>那我就访问 <a href="http://kangchou.github.io/">http://KangChou.github.io</a></p>
+<p>这时候我们就可以看到跟本地一模一样的博客内容了。</p>
+<p>（此时你用手机同样可以打开该网站）</p>
+<h2 id="二、博客的网页主题"><a href="#二、博客的网页主题" class="headerlink" title="二、博客的网页主题"></a>二、博客的网页主题</h2><p>主题的设置包括中文页面、整个页面的样式、页面风格等等，</p>
+<p>目前 Hexo 里面应用最多的主题基本就是 Next 主题，</p>
+<p>这个主题还是挺好看的，并且它支持的一些插件和功能都极为丰富，</p>
+<p>配置了这个主题，我们的博客可以支持更多的扩展功能，比如阅览进度条、中英文空格排版、图片懒加载等等。</p>
+<h3 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h3><p>打开我的电脑创建的Hexo文件夹下的blog目录，</p>
+<p>单击右键Git bush输入下面的命令，执行结果如下：</p>
+<p>git clone <a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a>   themes&#x2F;next</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704153422622.png" alt="image-20240704153422622"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">改完然后重新发布</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo  g</span><br><span class="line"></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152127212.png" alt="image-20240704152127212"></p>
+<p><strong>csdn也有大量文献修改主题的</strong></p>
+<h2 id="三、更换域名"><a href="#三、更换域名" class="headerlink" title="三、更换域名"></a>三、更换域名</h2><p><strong>相信所有做互联网开发的科技工作者都知道，如果拥有属于自己的网站一定得看起来很专业、很官方、很大气。</strong>因此，有些科技工作者就想更换自己网站的域名，让自己的域名看起来官方标准。也还有另一个原因，因为Github毕竟是外国网站，国内用户访问相对较慢，因此，如果有国内的域名作为辅助会事半功倍。事实上，我个人觉得只要可以搭建网站，即便是不换域名也没什么区别。不过，既然我给大家写这个教程，我还是有必要说一下，毕竟有很多人还是愿意换域名的。如果不想花钱买域名的，这一小节可以跳过。</p>
+<p>购买域名+注册阿里网+实名认证自行注册，如果你是在校大学生，包括硕士、博士购买域名都是有学生价优惠的，但是一定要使用自己在学校注册的电子邮箱，因为阿里云官网数据库可以识别你的学生信息的学年期限。此外，注册以后一定要进行学生认证、实名认证。 <strong>然后去买域名，域名的形式有很多，按照自己的需求进行设置域名名称和域名后缀。（实名认证最快是两天的时间）</strong><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151958891.png" alt="image-20240704151958891"></p>
+<h3 id="1、在阿里云添加域名解析"><a href="#1、在阿里云添加域名解析" class="headerlink" title="1、在阿里云添加域名解析"></a>1、在阿里云添加域名解析</h3><p>ping你的<a href="http://github.io域名,得到一个ip/">http://github.io域名，得到一个IP</a></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152301191.png" alt="image-20240704152301191"></p>
+<p>修改你的域名解析记录</p>
+<p>添加两个A记录，用得到的IP，一个主机记录为：“www”，一个为“@”，</p>
+<p>这样通过<a href="https://kangchou001.cn/%E5%B0%B1%E8%83%BD%E8%AE%BF%E9%97%AE%E5%88%B0%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86">https://kangchou001.cn/就能访问到你的博客了</a></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152703288.png"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152417484.png" alt="image-20240704152417484"></p>
+<p>****<strong>18、</strong>填写绑定的域名在你的本地文件下也就是hexo—&gt;你的博客（我的是long99-only）本地目录下找到 文件夹source ，并在该文件目录下面新建一个文件CNAME文件，那么一定要注意创建的CNAME文件没有任何扩展名（切记）</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152747089.png" alt="image-20240704152747089"></p>
+<p>再一次使用部署三命令<strong>hexo cleanhexo ghexo d****完成以后，</strong>进入Github设置，找到 Custom domain添加域名后保存即可</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152853759.png" alt="image-20240704152853759"></p>
+<p>19、刷新网页+更改域名成功</p>
+<p>如果上面的17没有出错的话，那么你填完域名保存以后会出现下面的结果</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152913971.png" alt="image-20240704152913971"></p>
+<p>那么就是更改域名成功了，此时你只需要点击上图的域名就可以访问啦。</p>
+<p>……到此完成了本博客的搭建……<br>————————————————</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/yum%E6%BA%90/</url>
+    <content><![CDATA[<h1 id="前言：更改CentOS-7的YUM源"><a href="#前言：更改CentOS-7的YUM源" class="headerlink" title="前言：更改CentOS 7的YUM源"></a>前言：更改CentOS 7的YUM源</h1><p>更改CentOS 7的YUM源是一种常见的操作，可以帮助加快软件包的下载速度并提高系统软件更新的效率。以下是分别更改为网易、阿里云和清华大学的YUM源的示例案例：</p>
+<h1 id="1、更改为网易YUM源："><a href="#1、更改为网易YUM源：" class="headerlink" title="1、更改为网易YUM源："></a>1、更改为网易YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载网易的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、更改为阿里云YUM源："><a href="#2、更改为阿里云YUM源：" class="headerlink" title="2、更改为阿里云YUM源："></a>2、更改为阿里云YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载阿里云的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+<h1 id="3、更改为清华大学YUM源："><a href="#3、更改为清华大学YUM源：" class="headerlink" title="3、更改为清华大学YUM源："></a>3、更改为清华大学YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载清华大学的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.tuna.tsinghua.edu.cn/help/CentOS7-Base-TUNA.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+
+<p>在每个步骤中，确保正确备份了原始YUM源文件，并验证新的YUM源文件是否可用以确保成功更改YUM源。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/zabbix+grafana+%E7%9D%BF%E8%B1%A1%E4%BA%91%E6%8A%A5%E8%AD%A6%E9%9B%86%E7%BE%A4/</url>
+    <content><![CDATA[<h1 id="前言！！！！！！！！！！！"><a href="#前言！！！！！！！！！！！" class="headerlink" title="前言！！！！！！！！！！！"></a>前言！！！！！！！！！！！</h1><p>一、grafana介绍<br>grafana是一个开源的数据可视化和监控平台，用于实时分析和监控指标、日志和其他数据源。它提供了丰富的图表、面板和仪表盘，使用户可以轻松地创建自定义的数据可视</p>
+<p>二、zabbix与grafana<br>1.zabbix和grafana是两种不同的工具，但可以结合使用来实现更强大的监控和数据可视化功能。</p>
+<p>2.zabbix是一种开源的网络监控和管理解决方案，它可以监控网络设备、服务器、应用程序和服务的性能和可用性。Zabbix提供了丰富的监控功能，包括实时监控、报警、事件处理和数据收集等。</p>
+<p>3.grafana是一个开源的数据可视化平台，它可以与各种数据源集成，包括zabbix。通过将zabbix的监控数据导入grafana，用户可以创建自定义的仪表盘、图表和报表，以更直观和可视化的方式展示监控数据。</p>
+<p>4.结合zabbix和grafana，用户可以利用zabbix的强大监控功能来收集数据，并使用grafana的灵活可视化工具来呈现这些数据。这样可以更直观地了解系统的性能和运行状况，帮助用户更好地分析和优化系统。<br>三、睿象云</p>
+<h1 id="一、当前下载的版本号"><a href="#一、当前下载的版本号" class="headerlink" title="一、当前下载的版本号"></a>一、当前下载的版本号</h1><p>官网：<a href="https://www.zabbix.com/">https://www.zabbix.com/</a></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705151954964.png" alt="image-20240705151954964"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">zabbix-server 		192.168.88.187</span><br><span class="line">zabbix-agent		192.168.88.197</span><br></pre></td></tr></table></figure>
+
+<p>当前用的MySQL是8.0</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705151613052.png" alt="image-20240705151613052"></p>
+<h2 id="做域名解析（server端和agent端都需要）"><a href="#做域名解析（server端和agent端都需要）" class="headerlink" title="做域名解析（server端和agent端都需要）"></a>做域名解析（server端和agent端都需要）</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]# vim /etc/hosts</span><br><span class="line">[root@zabbix-agent ~]# vim /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705201655622.png" alt="image-20240705201655622"></p>
+<h2 id="有epel源的注意："><a href="#有epel源的注意：" class="headerlink" title="有epel源的注意："></a>有epel源的注意：</h2><p>excludepkgs&#x3D;zabbix*</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705152145839.png" alt="image-20240705152145839"></p>
+<h1 id="二、开始下载"><a href="#二、开始下载" class="headerlink" title="二、开始下载"></a>二、开始下载</h1><h2 id="1、获取zabbix的repo源"><a href="#1、获取zabbix的repo源" class="headerlink" title="1、获取zabbix的repo源"></a>1、获取zabbix的repo源</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># rpm -Uvh https://repo.zabbix.com/zabbix/6.4/rhel/9/x86_64/zabbix-release-6.4-2.el9.noarch.rpm</span><br><span class="line"># dnf clean all    （可清可不清）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705152629560.png" alt="image-20240705152629560"></p>
+<h3 id="2、安装Zabbix-server，Web前端，agent"><a href="#2、安装Zabbix-server，Web前端，agent" class="headerlink" title="2、安装Zabbix server，Web前端，agent"></a>2、安装Zabbix server，Web前端，agent</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#dnf install -y  zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf zabbix-sql-scripts zabbix-selinux-policy zabbix-agent</span><br><span class="line"></span><br><span class="line">#dnf install -y zabbix-get 	(用于获取被监控节点agent的数据)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、安装mysql8-0"><a href="#3、安装mysql8-0" class="headerlink" title="3、安装mysql8.0"></a>3、安装mysql8.0</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]#rpm -Uvh https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm</span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# yum install -y mysql-community-server</span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# vim /etc/my.cnf</span><br><span class="line">[mysqld]</span><br><span class="line">skip_name_resolve = ON          #跳过主机名解析</span><br><span class="line">innodb_file_per_table = ON      #</span><br><span class="line">innodb_buffer_pool_size = 256M  #缓存池大小</span><br><span class="line">max_connections = 2000          #最大连接数</span><br><span class="line">log-bin = master-log            #开启二进制日志</span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# grep &quot;password&quot; /var/log/mysqld.log </span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# mysqladmin -uroot -p&quot;ae2mxtQ#?5?M&quot; password &quot;QWErtyuiop@123&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705160848218.png" alt="image-20240705160848218"></p>
+<h2 id="4、-创建初始数据库"><a href="#4、-创建初始数据库" class="headerlink" title="4、 创建初始数据库"></a>4、 创建初始数据库</h2><p><a href="https://www.zabbix.com/documentation/6.4/manual/appendix/install/db_scripts">产品手册</a></p>
+<p>在数据库主机上运行以下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># mysql -uroot -p&quot;password&quot;</span><br><span class="line">mysql&gt; create database zabbix character set utf8mb4 collate utf8mb4_bin;</span><br><span class="line">mysql&gt; create user zabbix@&quot;%&quot; identified by &#x27;password&#x27;;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@&quot;%&quot;;</span><br><span class="line">mysql&gt; set global log_bin_trust_function_creators = 1;  （导入初始化数据）</span><br><span class="line">mysql&gt; flush privileges;          </span><br><span class="line">mysql&gt;quit;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705162558981.png" alt="image-20240705162558981"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705162659700.png" alt="image-20240705162659700"></p>
+<h2 id="5、导入初始架构和数据，系统将提示您输入新创建的密码。"><a href="#5、导入初始架构和数据，系统将提示您输入新创建的密码。" class="headerlink" title="5、导入初始架构和数据，系统将提示您输入新创建的密码。"></a>5、导入初始架构和数据，系统将提示您输入新创建的密码。</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]# rpm -qa |grep zabbix</span><br><span class="line">[root@zabbix-server ~]# rpm -ql zabbix-sql-scripts</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705162036707.png" alt="image-20240705162036707"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]#  zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705162944566.png" alt="image-20240705162944566"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># mysql -uroot -p&quot;密码&quot;</span><br><span class="line">mysql&gt; set global log_bin_trust_function_creators = 0;</span><br><span class="line">mysql&gt; flush privileges;  </span><br></pre></td></tr></table></figure>
+
+<h2 id="6、为Zabbix-server配置数据库"><a href="#6、为Zabbix-server配置数据库" class="headerlink" title="6、为Zabbix server配置数据库"></a>6、为Zabbix server配置数据库</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]# vim /etc/zabbix/zabbix_server.conf</span><br><span class="line"></span><br><span class="line">ListenPort=10051            #默认监听端口</span><br><span class="line">SourceIP=192.168.88.187     #发采样数据请求的IP（所有的agent也要配置SourceIP）</span><br><span class="line">DBHost=192.168.88.187        #数据库对外的主机</span><br><span class="line">DBName=zabbix               #数据库名称</span><br><span class="line">DBUser=zabbix              #数据库用户</span><br><span class="line">DBPassword=keer             #数据库密码</span><br><span class="line">DBPort=3306                 #数据库启动端口</span><br></pre></td></tr></table></figure>
+
+<p><strong>当server端有多块网卡时，这里没有配置souceip的话是推送不了给server端的。但是，当server只有一块网卡的话不配souceip也可以推送给server端。</strong></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705165541517.png" alt="image-20240705165541517"></p>
+<h3 id="注意：如果是用的是nginx还需修改nginx的配置文件"><a href="#注意：如果是用的是nginx还需修改nginx的配置文件" class="headerlink" title="注意：如果是用的是nginx还需修改nginx的配置文件"></a>注意：如果是用的是nginx还需修改nginx的配置文件</h3><h2 id="7、启动Zabbix-server和agent进程"><a href="#7、启动Zabbix-server和agent进程" class="headerlink" title="7、启动Zabbix server和agent进程"></a>7、启动Zabbix server和agent进程</h2><p>启动Zabbix server和agent进程，并为它们设置开机自启：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># systemctl restart zabbix-server zabbix-agent httpd php-fpm</span><br><span class="line"># systemctl enable zabbix-server zabbix-agent httpd php-fpm</span><br></pre></td></tr></table></figure>
+
+<p>访问：<a href="http://192.168.88.187/zabbix">http://192.168.88.187/zabbix</a></p>
+<p>用户：Admin			密码：zabbix</p>
+<p><strong>到这里server端配置完成！！！！！！！！</strong></p>
+<h1 id="数据库密码或ip改变时"><a href="#数据库密码或ip改变时" class="headerlink" title="数据库密码或ip改变时"></a>数据库密码或ip改变时</h1><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705200810035.png" alt="image-20240705200810035"></p>
+<h1 id="三、在Zabbix6-4-6上面安装汉化包"><a href="#三、在Zabbix6-4-6上面安装汉化包" class="headerlink" title="三、在Zabbix6.4.6上面安装汉化包"></a><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705200631894.png" alt="image-20240705200631894">三、在Zabbix6.4.6上面安装汉化包</h1><h2 id="1、zabbix-server和WEB安装完成后，在设置语言时发现无法设置简体中文，原因为缺少简体中文语言包-需要安装"><a href="#1、zabbix-server和WEB安装完成后，在设置语言时发现无法设置简体中文，原因为缺少简体中文语言包-需要安装" class="headerlink" title="1、zabbix-server和WEB安装完成后，在设置语言时发现无法设置简体中文，原因为缺少简体中文语言包,需要安装"></a>1、zabbix-server和WEB安装完成后，在设置语言时发现无法设置简体中文，原因为缺少简体中文语言包,需要安装</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705174438201.png" alt="image-20240705174438201"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-server ~]# yum install glibc-langpack-zh.x86_64</span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# localectl list-locales | grep zh</span><br><span class="line"></span><br><span class="line">[root@zabbix-server ~]# systemctl restart zabbix-server zabbix-agent httpd php-fpm		（重启服务）</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705174524045.png" alt="image-20240705174524045"></p>
+<h2 id="2、登录zabbix控制台设置语言为简体中文"><a href="#2、登录zabbix控制台设置语言为简体中文" class="headerlink" title="2、登录zabbix控制台设置语言为简体中文"></a>2、登录zabbix控制台设置语言为简体中文</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705174838584.png" alt="image-20240705174838584"></p>
+<h1 id="四、在需要监控的服务器上安装zabbix的agent端"><a href="#四、在需要监控的服务器上安装zabbix的agent端" class="headerlink" title="四、在需要监控的服务器上安装zabbix的agent端"></a>四、在需要监控的服务器上安装zabbix的agent端</h1><h2 id="1、有epel源的注意："><a href="#1、有epel源的注意：" class="headerlink" title="1、有epel源的注意："></a>1、有epel源的注意：</h2><p>excludepkgs&#x3D;zabbix*</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705152145839.png" alt="image-20240705152145839"></p>
+<h2 id="2、安装zabbix的rpm包"><a href="#2、安装zabbix的rpm包" class="headerlink" title="2、安装zabbix的rpm包"></a>2、安装zabbix的rpm包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># rpm -Uvh https://repo.zabbix.com/zabbix/6.4/rhel/9/x86_64/zabbix-release-6.4-2.el9.noarch.rpm</span><br><span class="line"></span><br><span class="line"># dnf clean all    （可清可不清）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="3、安装zabbix-agent"><a href="#3、安装zabbix-agent" class="headerlink" title="3、安装zabbix-agent"></a>3、安装zabbix-agent</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># dnf install  -y zabbix-agent</span><br><span class="line"># dnf install -y zabbix-sender 	(用来测试数据能否推送给server端)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、修改agent的配置文件"><a href="#4、修改agent的配置文件" class="headerlink" title="4、修改agent的配置文件"></a>4、修改agent的配置文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbix-agent ~]# vim /etc/zabbix/zabbix_agentd.conf </span><br></pre></td></tr></table></figure>
+
+<p><strong>当server端有多块网卡时，这里没有配置souceip的话是推送不了给server端的。但是，当server只有一块网卡的话不配souceip也可以推送给server端。</strong></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705193345700.png" alt="image-20240705193345700"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705193423933.png" alt="image-20240705193423933"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705193514842.png" alt="image-20240705193514842"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705193543126.png" alt="image-20240705193543126"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705193621666.png" alt="image-20240705193621666"></p>
+<h2 id="5、启动agent"><a href="#5、启动agent" class="headerlink" title="5、启动agent"></a>5、启动agent</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#systemctl restart zabbix-agent</span><br><span class="line"># systemctl enable zabbix-agent</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、在web页面添加监控服务器的步骤"><a href="#6、在web页面添加监控服务器的步骤" class="headerlink" title="6、在web页面添加监控服务器的步骤"></a>6、在web页面添加监控服务器的步骤</h2><p>1、添加主机群组</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705195006897.png" alt="image-20240705195006897"></p>
+<p>2、添加主机</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705202250448.png" alt="image-20240705202250448"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705202436479.png" alt="image-20240705202436479"></p>
+<p>3、添加监控项</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705203006820.png" alt="image-20240705203006820"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705210642059.png" alt="image-20240705210642059"></p>
+<p>4、触发器</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705203757701.png" alt="image-20240705203757701"></p>
+<p>5、当触发器有触发时需要做的操作</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240705203950288.png" alt="image-20240705203950288">自定义消息内容</p>
+<p>主题：服务器报警<br>消息：<br>告警主机:{HOST.NAME}<br>告警地址:{HOST.IP}<br>监控项目:{ITEM.NAME}<br>监控取值:{ITEM.LASTVALUE}<br>告警等级:{TRIGGER.SEVERITY}<br>当前状态:{TRIGGER.STATUS}<br>告警信息:{TRIGGER.NAME}<br>告警时间:{EVENT.DATE} {EVENT.TIME}<br>事件ID:{EVENT.ID}</p>
+<p>主题：服务器已恢复<br>消息：<br>告警主机:{HOST.NAME}<br>告警地址:{HOST.IP}<br>监控项目:{ITEM.NAME}<br>监控取值:{ITEM.LASTVALUE}<br>告警等级:{TRIGGER.SEVERITY}<br>当前状态:{TRIGGER.STATUS}<br>告警信息:{TRIGGER.NAME}<br>告警时间:{EVENT.DATE} {EVENT.TIME}<br>事件ID:{EVENT.ID}</p>
+<h2 id="7、报警媒介看三阶段的zabbix笔记"><a href="#7、报警媒介看三阶段的zabbix笔记" class="headerlink" title="7、报警媒介看三阶段的zabbix笔记"></a>7、报警媒介看三阶段的zabbix笔记</h2><h1 id="五、grafana安装"><a href="#五、grafana安装" class="headerlink" title="五、grafana安装"></a>五、grafana安装</h1><h2 id="1、下载源https-grafana-com"><a href="#1、下载源https-grafana-com" class="headerlink" title="1、下载源		https://grafana.com/"></a>1、下载源		<a href="https://grafana.com/">https://grafana.com/</a></h2><p>yum install -y <a href="https://dl.grafana.com/enterprise/release/grafana-enterprise-9.2.0-1.x86_64.rpm">https://dl.grafana.com/enterprise/release/grafana-enterprise-9.2.0-1.x86_64.rpm</a></p>
+<p>在grafana配置文件中去掉用户和密码的注释（可以不改，默认就是这个）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@zabbixserver ~]# vim /etc/grafana/grafana.ini</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line"># default admin user, created on startup</span><br><span class="line"></span><br><span class="line">admin_user = admin</span><br><span class="line"></span><br><span class="line"># default admin password, can be changed before first start of grafana,  or in profile settings</span><br><span class="line"></span><br><span class="line">admin_password = admin</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、启动"><a href="#2、启动" class="headerlink" title="2、启动"></a>2、启动</h2><p>systemctl start grafana-server    &#x2F;&#x2F;启动服务<br>systemctl enable grafana-server  &#x2F;&#x2F;开机自启动<br>netstat -nltp | grep grafana     &#x2F;&#x2F;端口号 3000</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706092408986.png" alt="image-20240706092408986"></p>
+<p>登录账号admin     密码admin	</p>
+<h2 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706092325510.png" alt="image-20240706092325510"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706100331400.png" alt="image-20240706100331400"></p>
+<p>有两种方法安装zabbix插件，上面的这个最简单</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706093111252.png" alt="image-20240706093111252"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706093513031.png" alt="image-20240706093513031"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706093612957.png" alt="image-20240706093612957"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706094022688.png" alt="image-20240706094022688"></p>
+<p>#grafana-cli plugins install alexanderzobnin-zabbix-app</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706095733414.png" alt="image-20240706095733414"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706094444749.png" alt="image-20240706094444749"></p>
+<h2 id="4、配置zabbix数据源"><a href="#4、配置zabbix数据源" class="headerlink" title="4、配置zabbix数据源"></a>4、配置zabbix数据源</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706100444927.png" alt="image-20240706100444927"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706102003640.png" alt="image-20240706102003640"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706102054701.png" alt="image-20240706102054701"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706102528061.png" alt="image-20240706102528061"></p>
+<p>到这里就完成数据源的配置了</p>
+<h2 id="5、在web端添加监控图表"><a href="#5、在web端添加监控图表" class="headerlink" title="5、在web端添加监控图表"></a>5、在web端添加监控图表</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706102821606.png" alt="image-20240706102821606"></p>
+<h2 id="6、配置监控项"><a href="#6、配置监控项" class="headerlink" title="6、配置监控项"></a>6、配置监控项</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706114244918.png" alt="image-20240706114244918"></p>
+<h2 id="需注意的事情："><a href="#需注意的事情：" class="headerlink" title="需注意的事情："></a><strong>需注意的事情：</strong></h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706113841016.png" alt="image-20240706113841016"></p>
+<h1 id="六、睿象云报警平台"><a href="#六、睿象云报警平台" class="headerlink" title="六、睿象云报警平台"></a>六、睿象云报警平台</h1><h2 id="1、需要注册登录睿象云"><a href="#1、需要注册登录睿象云" class="headerlink" title="1、需要注册登录睿象云"></a>1、需要注册登录睿象云</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706141606363.png" alt="image-20240706141606363"></p>
+<h2 id="2、生成key安装睿象云"><a href="#2、生成key安装睿象云" class="headerlink" title="2、生成key安装睿象云"></a>2、生成key安装睿象云</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706141528565.png" alt="image-20240706141528565"></p>
+<h2 id="3、在server端配置睿象云"><a href="#3、在server端配置睿象云" class="headerlink" title="3、在server端配置睿象云"></a>3、在server端配置睿象云</h2><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706140920935.png" alt="image-20240706140920935"></p>
+<h3 id="获取-Cloud-Alert-Agent-包"><a href="#获取-Cloud-Alert-Agent-包" class="headerlink" title="获取 Cloud Alert Agent 包"></a>获取 Cloud Alert Agent 包</h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706141847838.png" alt="image-20240706141847838"></p>
+<h3 id="解压安装"><a href="#解压安装" class="headerlink" title="解压安装"></a>解压安装</h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706142225278.png" alt="image-20240706142225278"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706142715394.png" alt="image-20240706142715394"></p>
+<h3 id="怎么查看是否安装成功呢？？？？？？"><a href="#怎么查看是否安装成功呢？？？？？？" class="headerlink" title="怎么查看是否安装成功呢？？？？？？"></a><strong>怎么查看是否安装成功呢？？？？？？</strong></h3><p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706142901575.png" alt="image-20240706142901575"></p>
+<h1 id="七、Grafana连接MySQL数据库取值"><a href="#七、Grafana连接MySQL数据库取值" class="headerlink" title="七、Grafana连接MySQL数据库取值"></a>七、Grafana连接MySQL数据库取值</h1><p>上面介绍的是Grafana通过zabbix插件进行取值，是利用的zabbix的API，Grafana还可以通过数据库插件连接zabbix的数据库取值，Grafana的自定义查询功能，可以在SQL数据库中编写查询语句，扩展性更强，并且从数据库获取数值的用时会更少，图表显示的更加精确</p>
+<p>Mysql是自带的插件，不用安装</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706144820046.png" alt="image-20240706144820046"></p>
+<p>添加数据源</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706144830914.png" alt="image-20240706144830914"></p>
+<p>添加相应信息，添加好后下滑保存</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706144839528.png" alt="image-20240706144839528"></p>
+<p>zabbix的插件处选择mysql</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706144854213.png" alt="image-20240706144854213"></p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706144949197.png"></p>
+<p>我们进入仪表盘编辑一个图表</p>
+<p>可以在此处修改数据源为mysql</p>
+<p><img src="C:\Users\曹俊龙\AppData\Roaming\Typora\typora-user-images\image-20240706145137051.png" alt="image-20240706145137051"></p>
+<p>也可以在数据源的位置把mysql的数据源设置成默认，虽然不会修改原有的，但是再添加新的就省的调整了</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240706145216730.png" alt="image-20240706145216730"></p>
+<p>同样是在此处编写要采集的数值，这些参数其实也就是SQL语句的参数，还可以点击Edit SQL直接编写SQL语句</p>
+<p><img src="C:\Users\曹俊龙\AppData\Roaming\Typora\typora-user-images\image-20240706145231265.png" alt="image-20240706145231265"></p>
+<h1 id="感谢观看！！！！！！！！！！！！！！"><a href="#感谢观看！！！！！！！！！！！！！！" class="headerlink" title="感谢观看！！！！！！！！！！！！！！"></a>感谢观看！！！！！！！！！！！！！！</h1>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
+    <content><![CDATA[<p>一、安装虚拟机(提前去Centos官网下载linux的iso镜像文件)</p>
+<p><a href="https://www.centos.org/">https://www.centos.org/</a></p>
+<p>1.打开vmware，点击左上角文件按钮，选择新建虚拟机</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090411387.png" alt="image-20240522090411387"></p>
+<p>2.选择典型安装（自定义安装比较麻烦，典型安装更便捷）</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090434558.png" alt="image-20240522090434558"></p>
+<p>3.先不着急安装系统，建议选择稍后安装操作系统</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090456920.png" alt="image-20240522090456920"></p>
+<p>4.安装的是linux系统，版本建议选择Centos 7 64位</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090511708.png" alt="image-20240522090511708"></p>
+<p>5.给你的虚拟机起名字，并选择安装位置，不建议名字有中文，不建议安装到系统C盘</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090526255.png" alt="image-20240522090526255"></p>
+<p>6.设置磁盘大小，一般情况选择将虚拟磁盘存储为单个文件</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090548659.png" alt="image-20240522090548659"></p>
+<p>7.点击完成，虚拟机就创建完成了</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090601735.png" alt="image-20240522090601735"></p>
+<p>二、虚拟机安装linux系统<br>1.点击编辑虚拟机设置</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090620221.png" alt="image-20240522090620221">2.选择cd&#x2F;dvd，连接选择使用iso映像文件，浏览选择刚开始下载的iso镜像文件，点击确定</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090641207.png" alt="image-20240522090641207"></p>
+<p>3.开启此虚拟机，准备安装系统</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090657556.png" alt="image-20240522090657556"></p>
+<p>4.鼠标点进去，用键盘的上下左右键选择Install Centos 7</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090716143.png" alt="image-20240522090716143"></p>
+<p>5.选择系统语言</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090731077.png" alt="image-20240522090731077"></p>
+<p>6.其他的不需要管，软件选择就选择最小安装，点击安装位置</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090802748.png" alt="image-20240522090802748"></p>
+<p>7.下面选择我要配置分区，点击完成</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090823832.png" alt="image-20240522090823832"></p>
+<p>8.点这里自动创建它们</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090845622.png" alt="image-20240522090845622"></p>
+<p>9.点击完成</p>
+<p>​	<img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090905416.png" alt="image-20240522090905416"></p>
+<p>10.点击接受更改</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090918817.png" alt="image-20240522090918817"></p>
+<p>11.系统安装前的设置就改完了，点击开始安装</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090940235.png" alt="image-20240522090940235"></p>
+<p>12.安装的过程中，设置一下root密码</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090957077.png" alt="image-20240522090957077"></p>
+<p>13.设置root密码，完成后点击完成</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090150392.png" alt="image-20240522090150392"></p>
+<p>14.等待安装完成后，重启虚拟机，输入用户名和密码就可以进入终端进行操作了<br>注意：登录时输入密码是不显示的</p>
+]]></content>
+  </entry>
+</search>
