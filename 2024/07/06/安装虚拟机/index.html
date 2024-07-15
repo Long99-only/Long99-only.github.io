@@ -1,29 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <!DOCTYPE html>
-  <html lang="zh-CN"  >
-  <head>
-  <meta charset="utf-8">
-  
+<link rel="stylesheet" href="/css/main.css">
 
-  
 
-  
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  
-  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ"};</script>
-  
-  
-  <title>
-    
-    SuperLong
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CUbuntu%20Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
-  
-    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  
-  
-<link rel="stylesheet" href="/css/loader.css">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="一、安装虚拟机(提前去Centos官网下载linux的iso镜像文件) https:&#x2F;&#x2F;www.centos.org&#x2F; 1.打开vmware，点击左上角文件按钮，选择新建虚拟机  2.选择典型安装（自定义安装比较麻烦，典型安装更便捷）  3.先不着急安装系统，建议选择稍后安装操作系统  4.安装的是linux系统，版本建议选择Centos 7 64位  5.给你的虚拟机起名字，并选择安装位置，不建">
 <meta property="og:type" content="article">
@@ -58,172 +53,235 @@
 <meta property="article:tag" content="Linux Docker K8">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090411387.png">
-  
-    <link rel="alternate" href="/atom.xml" title="SuperLong" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/images/favicon.ico">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css">
+<link rel="canonical" href="http://example.com/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/">
 
-  
-  
-  
-  
-<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"></script>
 
-  
-    
-<link rel="stylesheet" href="https://npm.webcache.cn/wowjs@1.1.3/css/libs/animate.css">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
-    
-<script src="https://npm.webcache.cn/wowjs@1.1.3/dist/wow.min.js"></script>
+  <title> | SuperLong</title>
+  
 
-    <script>
-      new WOW({
-        offset: 0,
-        mobile: true,
-        live: false
-      }).init();
-    </script>
-  
-  
-    <script src="/sw.js"></script>
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
 
-  <body>
-    
-  <div id='loader'>
-    <div class="loading-left-bg loading-bg"></div>
-    <div class="loading-right-bg loading-bg"></div>
-    <div class="spinner-box">
-      <div class="loading-taichi">
-        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
-          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
-          <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
-        </svg>
-      </div>
-      <div class="loading-word">少女祈祷中...</div>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">SuperLong</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">愚人千虑 必有一得</p>
   </div>
-  <script>
-    var time = null;
-    var startLoading = () => {
-      time = Date.now();
-      document.getElementById('loader').classList.remove("loading");
-    }
-    var endLoading = () => {
-      if (!time) {
-        document.body.style.overflow = 'auto';
-        document.getElementById('loader').classList.add("loading");
-      } else {
-        if (Date.now() - time > 500) {
-          time = null;
-          document.body.style.overflow = 'auto';
-          document.getElementById('loader').classList.add("loading");
-        } else {
-          setTimeout(endLoading, 500 - (Date.now() - time));
-          time = null;
-        }
-      }
-    }
-    window.addEventListener('DOMContentLoaded', endLoading);
-    document.getElementById('loader').addEventListener('click', endLoading);
-  </script>
 
-<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
-</div>
-
-    <div id="container">
-      <div id="wrap">
-        <div id="header-nav">
-  <nav id="main-nav">
-    
-      <span class="main-nav-link-wrap">
-        <span class="main-nav-icon"></span>
-        <a class="main-nav-link" href="/">首页</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <span class="main-nav-icon"></span>
-        <a class="main-nav-link" href="/archives">归档</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <span class="main-nav-icon"></span>
-        <a class="main-nav-link" href="/about">关于</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <span class="main-nav-icon"></span>
-        <a class="main-nav-link" href="/friend">友链</a>
-      </span>
-    
-    <a id="main-nav-toggle" class="nav-icon"></a>
-  </nav>
-  <nav id="sub-nav">
-    
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-    
-    
-    
-  </nav>
-</div>
-<header id="header">
-  
-    
-      <img fetchpriority="high" src="/images/banner.webp" alt="">
-    
-  
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <div id="logo-wrap">
-        
-          
-          
-            <a href="/" id="logo">
-              <h1>SuperLong</h1>
-            </a>
-          
-        
-      </div>
-      
-        
-        <h2 id="subtitle-wrap">
-          
-            <a href="/" id="subtitle">愚人千虑 必有一得</a>
-          
-        </h2>
-      
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
-</header>
-
-        <div id="content" class="outer">
-          
-          <section id="main"><article id="post-安装虚拟机" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner">
-    <div class="article-meta">
-      <div class="article-date wow slideInLeft">
-  <a href="/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="article-date-link">
-    <time datetime="2024-07-06T07:02:58.648Z" itemprop="datePublished">2024-07-06</time>
-  </a>
 </div>
 
-      
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
 
     </div>
-    <div class="hr-line"></div>
-    
+  </div>
 
-    <div class="e-content article-entry" itemprop="articleBody">
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/session" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+      <meta itemprop="name" content="Mr.Long">
+      <meta itemprop="description" content="心有所向 无问东西">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SuperLong">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-06 15:02:58" itemprop="dateCreated datePublished" datetime="2024-07-06T15:02:58+08:00">2024-07-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-22 09:45:39" itemprop="dateModified" datetime="2024-05-22T09:45:39+08:00">2024-05-22</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>566</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <p>一、安装虚拟机(提前去Centos官网下载linux的iso镜像文件)</p>
 <p><a target="_blank" rel="noopener" href="https://www.centos.org/">https://www.centos.org/</a></p>
@@ -268,376 +326,265 @@
 <p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090150392.png" alt="image-20240522090150392"></p>
 <p>14.等待安装完成后，重启虚拟机，输入用户名和密码就可以进入终端进行操作了<br>注意：登录时输入密码是不显示的</p>
 
-      
     </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-      
-      
-      
 
-    </footer>
-  </div>
-  
     
-  <nav id="article-nav" class="wow fadeInUp">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
+    
         
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Mr.Long
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="">http://example.com/2024/07/06/安装虚拟机/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/07/06/zabbix+grafana+%E7%9D%BF%E8%B1%A1%E4%BA%91%E6%8A%A5%E8%AD%A6%E9%9B%86%E7%BE%A4/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/07/06/yum%E6%BA%90/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
           
-          
-            <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
-          
-        
-        <a href="/2024/07/06/yum%E6%BA%90/"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-          
-            (no title)
-          
-        </h3>
-      </div>
-    
-    
-    <div class="article-nav-link-wrap article-nav-link-right">
-      
-        
-        
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
-        
-      
-      <a href="/2024/07/06/zabbix+grafana+%E7%9D%BF%E8%B1%A1%E4%BA%91%E6%8A%A5%E8%AD%A6%E9%9B%86%E7%BE%A4/"></a>
-      <div class="article-nav-caption">后一篇</div>
-      <h3 class="article-nav-title">
-        
-          (no title)
-        
-      </h3>
-    </div>
-    
-  </nav>
 
-
-  
-</article>
-
-
-
-
-
-
-</section>
-          
-            <aside id="sidebar">
-  <div class="sidebar-wrap wow fadeInRight wrap-sticky">
-    
-      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
-  <h3 class="toc-title">文章目录</h3>
-  <div class="sidebar-toc-wrapper toc-div-class" >
-      
-        
-      
-  </div>
-</div>
-</div>
-      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mr.Long" class="lazyload">
-  <div class="sidebar-author-name">Mr.Long</div>
-  <div class="sidebar-description">心有所向 无问东西</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    <div class="sidebar-state-number">4</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分类</div>
-    <div class="sidebar-state-number">0</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>标签</div>
-    <div class="sidebar-state-number">0</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-</div>
-<div class="sidebar-menu">
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
-  
-</div>
-</div>
-    
-    
-      <div class="sidebar-btn-wrapper" style="position:static">
-        <div class="sidebar-toc-btn current"></div>
-        <div class="sidebar-common-btn"></div>
-      </div>
-    
-  </div>
-
-  
-</aside>
-
-          
-        </div>
-        <footer id="footer" class="wow fadeInUp">
-  <div style="width: 100%; overflow: hidden">
-    <div class="footer-line"></div>
-  </div>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      <div>
-        <span class="icon-copyright"></span>
-        2020-2024
-        <span class="footer-info-sep"></span>
-        Mr.Long
-      </div>
-      
-        <div>
-          基于&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
-          Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
-        </div>
-      
-      
-        <div>
-          <span class="icon-brush"></span>
-          4.8k
-          &nbsp;|&nbsp;
-          <span class="icon-coffee"></span>
-          00:17
-        </div>
-      
-      
-        <div>
-          <span class="icon-eye"></span>
-          <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
-          &nbsp;|&nbsp;
-          <span class="icon-user"></span>
-          <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
-        </div>
-      
-    </div>
-  </div>
-</footer>
-
-        <div class="sidebar-top">
-          <img src="/images/taichi.png" height="50" width="50" alt="backtop" />
-          <div class="arrow-up"></div>
-        </div>
-        <div id="mask"></div>
-      </div>
-      <nav id="mobile-nav">
-  <div class="sidebar-wrap">
-    
-      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
-  <h3 class="toc-title">文章目录</h3>
-  <div class="sidebar-toc-wrapper toc-div-class" >
-      
-        
-      
-  </div>
-</div>
-</div>
-      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Mr.Long" class="lazyload">
-  <div class="sidebar-author-name">Mr.Long</div>
-  <div class="sidebar-description">心有所向 无问东西</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    <div class="sidebar-state-number">4</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分类</div>
-    <div class="sidebar-state-number">0</div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>标签</div>
-    <div class="sidebar-state-number">0</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-</div>
-<div class="sidebar-menu">
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
-      <span class="sidebar-menu-icon"></span>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
-  
-</div>
-</div>
-    
-  </div>
-  
-    <div class="sidebar-btn-wrapper">
-      <div class="sidebar-toc-btn current"></div>
-      <div class="sidebar-common-btn"></div>
-    </div>
-  
-</nav>
-
-    </div>
-    <div class="site-search">
-      <div class="reimu-popup popup">
-        <div class="reimu-search">
-          <span class="reimu-search-input-icon"></span>
-          <div class="reimu-search-input" id="reimu-search-input"></div>
-        </div>
-        <div class="reimu-results">
-          <div id="reimu-stats"></div>
-          <div id="reimu-hits"></div>
-          <div id="reimu-pagination" class="reimu-pagination"></div>
-        </div>
-        <span class="popup-btn-close"></span>
-      </div>
-    </div>
-    
-<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"></script>
-
-
-<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"></script>
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-<script src="/js/pjax_script.js" data-pjax></script>
-
-
-<script type="module" data-pjax>
-  import PhotoSwipeLightbox from "https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.js";
-  
-  const pswp = () => {
-    if (_$$('.article-entry a.article-gallery-item').length > 0) {
-      new PhotoSwipeLightbox({
-        gallery: '.article-entry',
-        children: 'a.article-gallery-item',
-        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
-      }).init();
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
-    if(_$$('.article-gallery a.article-gallery-item').length > 0) {
-      new PhotoSwipeLightbox({
-        gallery: '.article-gallery',
-        children: 'a.article-gallery-item',
-        pswpModule: () => import("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.js")
-      }).init();
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
     }
-    window.lightboxStatus = 'done';
-    window.removeEventListener('lightbox:ready', pswp);
-  }
-  if(window.lightboxStatus === 'ready') {
-    pswp()
-  } else {
-    window.addEventListener('lightbox:ready', pswp);
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+          
   
-<script src="https://npm.webcache.cn/mouse-firework@0.0.4/dist/index.umd.js"></script>
-
-  <script>
-    firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
-  </script>
-
-
-
-
-
-
-<div id="lazy-script">
-  <div>
-    
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Mr.Long"
+      src="/images/touxiang.jpg">
+  <p class="site-author-name" itemprop="name">Mr.Long</p>
+  <div class="site-description" itemprop="description">心有所向 无问东西</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Long</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">10k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+</div>
+  <div class="powered-by">
+   <!--由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动 -->
+
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2024 10:22:40"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
 </div>
 
 
-  <script>
-    console.log(String.raw`%c 
- ______     ______     __     __    __     __  __    
-/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
-\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
- \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
-  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
-                                                  
-`,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '0.2.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
-  </script>
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
   
 
 
+
+
   
-<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+<script src="/js/local-search.js"></script>
 
 
-  <!-- hexo injector body_end start -->
-<script src="/js/insert_highlight.js" data-pjax></script>
-<!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-  </html>
 
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
