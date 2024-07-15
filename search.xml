@@ -73,7 +73,7 @@
 <p>注意：第一次提交，配置密钥，需要输入github的密码，如下就是添加秘钥成功</p>
 <p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704151115495.png" alt="image-20240704151115495"></p>
 <p>密钥配置成功后，要验证一下是否配置成功</p>
-<p>命令：ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>命令：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>出现下面提示，说明配置成功。</p>
 <p>Hi KangChou&#x2F;KangChou.github.io! You’ve successfully authenticated, but GitHub does not provide shell access</p>
 <h3 id="11、再次使用密钥部署"><a href="#11、再次使用密钥部署" class="headerlink" title="11、再次使用密钥部署"></a>11、再次使用密钥部署</h3><p>仍然使用命令：</p>
@@ -118,6 +118,97 @@
 <p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240704152913971.png" alt="image-20240704152913971"></p>
 <p>那么就是更改域名成功了，此时你只需要点击上图的域名就可以访问啦。</p>
 <p>……到此完成了本博客的搭建……<br>————————————————</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
+    <content><![CDATA[<p>一、安装虚拟机(提前去Centos官网下载linux的iso镜像文件)</p>
+<p><a href="https://www.centos.org/">https://www.centos.org/</a></p>
+<p>1.打开vmware，点击左上角文件按钮，选择新建虚拟机</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090411387.png" alt="image-20240522090411387"></p>
+<p>2.选择典型安装（自定义安装比较麻烦，典型安装更便捷）</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090434558.png" alt="image-20240522090434558"></p>
+<p>3.先不着急安装系统，建议选择稍后安装操作系统</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090456920.png" alt="image-20240522090456920"></p>
+<p>4.安装的是linux系统，版本建议选择Centos 7 64位</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090511708.png" alt="image-20240522090511708"></p>
+<p>5.给你的虚拟机起名字，并选择安装位置，不建议名字有中文，不建议安装到系统C盘</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090526255.png" alt="image-20240522090526255"></p>
+<p>6.设置磁盘大小，一般情况选择将虚拟磁盘存储为单个文件</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090548659.png" alt="image-20240522090548659"></p>
+<p>7.点击完成，虚拟机就创建完成了</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090601735.png" alt="image-20240522090601735"></p>
+<p>二、虚拟机安装linux系统<br>1.点击编辑虚拟机设置</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090620221.png" alt="image-20240522090620221">2.选择cd&#x2F;dvd，连接选择使用iso映像文件，浏览选择刚开始下载的iso镜像文件，点击确定</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090641207.png" alt="image-20240522090641207"></p>
+<p>3.开启此虚拟机，准备安装系统</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090657556.png" alt="image-20240522090657556"></p>
+<p>4.鼠标点进去，用键盘的上下左右键选择Install Centos 7</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090716143.png" alt="image-20240522090716143"></p>
+<p>5.选择系统语言</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090731077.png" alt="image-20240522090731077"></p>
+<p>6.其他的不需要管，软件选择就选择最小安装，点击安装位置</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090802748.png" alt="image-20240522090802748"></p>
+<p>7.下面选择我要配置分区，点击完成</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090823832.png" alt="image-20240522090823832"></p>
+<p>8.点这里自动创建它们</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090845622.png" alt="image-20240522090845622"></p>
+<p>9.点击完成</p>
+<p>​	<img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090905416.png" alt="image-20240522090905416"></p>
+<p>10.点击接受更改</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090918817.png" alt="image-20240522090918817"></p>
+<p>11.系统安装前的设置就改完了，点击开始安装</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090940235.png" alt="image-20240522090940235"></p>
+<p>12.安装的过程中，设置一下root密码</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090957077.png" alt="image-20240522090957077"></p>
+<p>13.设置root密码，完成后点击完成</p>
+<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090150392.png" alt="image-20240522090150392"></p>
+<p>14.等待安装完成后，重启虚拟机，输入用户名和密码就可以进入终端进行操作了<br>注意：登录时输入密码是不显示的</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/07/06/yum%E6%BA%90/</url>
+    <content><![CDATA[<h1 id="前言：更改CentOS-7的YUM源"><a href="#前言：更改CentOS-7的YUM源" class="headerlink" title="前言：更改CentOS 7的YUM源"></a>前言：更改CentOS 7的YUM源</h1><p>更改CentOS 7的YUM源是一种常见的操作，可以帮助加快软件包的下载速度并提高系统软件更新的效率。以下是分别更改为网易、阿里云和清华大学的YUM源的示例案例：</p>
+<h1 id="1、更改为网易YUM源："><a href="#1、更改为网易YUM源：" class="headerlink" title="1、更改为网易YUM源："></a>1、更改为网易YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载网易的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、更改为阿里云YUM源："><a href="#2、更改为阿里云YUM源：" class="headerlink" title="2、更改为阿里云YUM源："></a>2、更改为阿里云YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载阿里云的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+<h1 id="3、更改为清华大学YUM源："><a href="#3、更改为清华大学YUM源：" class="headerlink" title="3、更改为清华大学YUM源："></a>3、更改为清华大学YUM源：</h1><p>备份当前的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
+
+<p>下载清华大学的YUM源文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.tuna.tsinghua.edu.cn/help/CentOS7-Base-TUNA.repo</span><br></pre></td></tr></table></figure>
+
+<p>清除YUM缓存：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
+
+<p>更新YUM缓存并测试YUM源是否可用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
+
+
+<p>在每个步骤中，确保正确备份了原始YUM源文件，并验证新的YUM源文件是否可用以确保成功更改YUM源。</p>
 ]]></content>
   </entry>
   <entry>
@@ -257,96 +348,5 @@
 <p>同样是在此处编写要采集的数值，这些参数其实也就是SQL语句的参数，还可以点击Edit SQL直接编写SQL语句</p>
 <p><img src="C:\Users\曹俊龙\AppData\Roaming\Typora\typora-user-images\image-20240706145231265.png" alt="image-20240706145231265"></p>
 <h1 id="感谢观看！！！！！！！！！！！！！！"><a href="#感谢观看！！！！！！！！！！！！！！" class="headerlink" title="感谢观看！！！！！！！！！！！！！！"></a>感谢观看！！！！！！！！！！！！！！</h1>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/07/06/yum%E6%BA%90/</url>
-    <content><![CDATA[<h1 id="前言：更改CentOS-7的YUM源"><a href="#前言：更改CentOS-7的YUM源" class="headerlink" title="前言：更改CentOS 7的YUM源"></a>前言：更改CentOS 7的YUM源</h1><p>更改CentOS 7的YUM源是一种常见的操作，可以帮助加快软件包的下载速度并提高系统软件更新的效率。以下是分别更改为网易、阿里云和清华大学的YUM源的示例案例：</p>
-<h1 id="1、更改为网易YUM源："><a href="#1、更改为网易YUM源：" class="headerlink" title="1、更改为网易YUM源："></a>1、更改为网易YUM源：</h1><p>备份当前的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
-
-<p>下载网易的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo</span><br></pre></td></tr></table></figure>
-
-<p>清除YUM缓存：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
-
-<p>更新YUM缓存并测试YUM源是否可用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、更改为阿里云YUM源："><a href="#2、更改为阿里云YUM源：" class="headerlink" title="2、更改为阿里云YUM源："></a>2、更改为阿里云YUM源：</h1><p>备份当前的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
-
-<p>下载阿里云的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
-
-<p>清除YUM缓存：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
-
-<p>更新YUM缓存并测试YUM源是否可用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、更改为清华大学YUM源："><a href="#3、更改为清华大学YUM源：" class="headerlink" title="3、更改为清华大学YUM源："></a>3、更改为清华大学YUM源：</h1><p>备份当前的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br></pre></td></tr></table></figure>
-
-<p>下载清华大学的YUM源文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.tuna.tsinghua.edu.cn/help/CentOS7-Base-TUNA.repo</span><br></pre></td></tr></table></figure>
-
-<p>清除YUM缓存：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum clean all</span><br></pre></td></tr></table></figure>
-
-<p>更新YUM缓存并测试YUM源是否可用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum makecache</span><br><span class="line">sudo yum update</span><br></pre></td></tr></table></figure>
-
-
-<p>在每个步骤中，确保正确备份了原始YUM源文件，并验证新的YUM源文件是否可用以确保成功更改YUM源。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/07/06/%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
-    <content><![CDATA[<p>一、安装虚拟机(提前去Centos官网下载linux的iso镜像文件)</p>
-<p><a href="https://www.centos.org/">https://www.centos.org/</a></p>
-<p>1.打开vmware，点击左上角文件按钮，选择新建虚拟机</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090411387.png" alt="image-20240522090411387"></p>
-<p>2.选择典型安装（自定义安装比较麻烦，典型安装更便捷）</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090434558.png" alt="image-20240522090434558"></p>
-<p>3.先不着急安装系统，建议选择稍后安装操作系统</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090456920.png" alt="image-20240522090456920"></p>
-<p>4.安装的是linux系统，版本建议选择Centos 7 64位</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090511708.png" alt="image-20240522090511708"></p>
-<p>5.给你的虚拟机起名字，并选择安装位置，不建议名字有中文，不建议安装到系统C盘</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090526255.png" alt="image-20240522090526255"></p>
-<p>6.设置磁盘大小，一般情况选择将虚拟磁盘存储为单个文件</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090548659.png" alt="image-20240522090548659"></p>
-<p>7.点击完成，虚拟机就创建完成了</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090601735.png" alt="image-20240522090601735"></p>
-<p>二、虚拟机安装linux系统<br>1.点击编辑虚拟机设置</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090620221.png" alt="image-20240522090620221">2.选择cd&#x2F;dvd，连接选择使用iso映像文件，浏览选择刚开始下载的iso镜像文件，点击确定</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090641207.png" alt="image-20240522090641207"></p>
-<p>3.开启此虚拟机，准备安装系统</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090657556.png" alt="image-20240522090657556"></p>
-<p>4.鼠标点进去，用键盘的上下左右键选择Install Centos 7</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090716143.png" alt="image-20240522090716143"></p>
-<p>5.选择系统语言</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090731077.png" alt="image-20240522090731077"></p>
-<p>6.其他的不需要管，软件选择就选择最小安装，点击安装位置</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090802748.png" alt="image-20240522090802748"></p>
-<p>7.下面选择我要配置分区，点击完成</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090823832.png" alt="image-20240522090823832"></p>
-<p>8.点这里自动创建它们</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090845622.png" alt="image-20240522090845622"></p>
-<p>9.点击完成</p>
-<p>​	<img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090905416.png" alt="image-20240522090905416"></p>
-<p>10.点击接受更改</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090918817.png" alt="image-20240522090918817"></p>
-<p>11.系统安装前的设置就改完了，点击开始安装</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090940235.png" alt="image-20240522090940235"></p>
-<p>12.安装的过程中，设置一下root密码</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090957077.png" alt="image-20240522090957077"></p>
-<p>13.设置root密码，完成后点击完成</p>
-<p><img src="https://guangxipengyuyan.oss-cn-guangzhou.aliyuncs.com/image-20240522090150392.png" alt="image-20240522090150392"></p>
-<p>14.等待安装完成后，重启虚拟机，输入用户名和密码就可以进入终端进行操作了<br>注意：登录时输入密码是不显示的</p>
-]]></content>
   </entry>
 </search>
